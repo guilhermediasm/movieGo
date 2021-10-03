@@ -15,7 +15,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="movieGo" title="MovieGo" src="./src/assets/banner.png" />
+    <img alt="movieGo" title="MovieGo" src="./src/assets/img/banner.png" />
 </h1>
 
 <h4 align="center"> 
@@ -55,15 +55,15 @@
 ### Mobile
 
 <p align="center">
-  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenListMovie.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/img/screenListMovie.png" width="200px">
 
-  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenPopularMovie.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/img/screenPopularMovie.png" width="200px">
 
-  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenShop.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/img/screenShop.png" width="200px">
   
-  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenDetails.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/img/screenDetails.png" width="200px">
 
-  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenLikeMovie.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/img/screenLikeMovie.png" width="200px">
 </p>
 
 ---
