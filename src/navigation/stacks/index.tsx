@@ -61,7 +61,9 @@ export const InitialRouteStack = (): JSX.Element => (
 );
 
 export const ModalsStack = (): JSX.Element => (
-  <Modals.Navigator screenOptions={{ presentation: 'modal' }}>
+  <Modals.Navigator
+    screenOptions={{ presentation: 'modal', headerShown: false }}
+  >
     <Modals.Screen name={Routes.DETAIL_MODAL} component={DetailMovieScreen} />
     <Modals.Screen name={Routes.SHOPPING} component={ShoppingScreen} />
   </Modals.Navigator>
