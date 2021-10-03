@@ -14,6 +14,7 @@ export const Wrapper = styled(ScreenWrapper)``;
 
 export const ContainerDetailMovie = styled.View`
   margin-left: ${spacings.normalSpacing}px;
+  width: 55%;
 `;
 export const ContainerMovie = styled.View`
   flex-direction: row;

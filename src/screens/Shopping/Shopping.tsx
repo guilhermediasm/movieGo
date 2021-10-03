@@ -8,6 +8,7 @@ import {
   CarrinhoText,
   Container,
   GolBack,
+  Header,
   ListShopBuyMovie,
   Ops,
   ShopBuy,
@@ -24,10 +25,13 @@ type Props = {
 
 const Shopping: FC<Props> = ({ onGoBack, shop, removeMovie }) => (
   <Wrapper>
-    <GolBack onPress={() => onGoBack()}>
-      <IconArrowLeft color="black" />
+    <Header>
+      <GolBack onPress={() => onGoBack()}>
+        <IconArrowLeft color="black" />
+      </GolBack>
       <CarrinhoText>Carrinho</CarrinhoText>
-    </GolBack>
+    </Header>
+
     {!isEmpty(shop) && (
       <ListShopBuyMovie
         keyExtractor={(_item, i) => i.toString()}

@@ -37,7 +37,9 @@ export const ShopBuy = styled(Typography)`
   color: ${colors.secondary.main};
 `;
 
-export const GolBack = styled(Touchable)`
+export const GolBack = styled(Touchable)``;
+
+export const Header = styled.View`
   flex-direction: row;
 `;
 
