@@ -9,9 +9,6 @@
   </a>
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/guilhermediasm/movieGo/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/guilhermediasm/movieGo?style=social">
-  </a>
 </p>
 
 <h1 align="center">
