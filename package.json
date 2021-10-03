@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "adb reverse tcp:9090 tcp:9090 && react-native run-android",
+    "android": "react-native run-android",
     "ios": "npx pod-install && react-native run-ios",
     "start": "react-native start",
     "test": "jest",

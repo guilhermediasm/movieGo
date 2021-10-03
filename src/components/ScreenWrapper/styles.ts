@@ -7,5 +7,7 @@ export const Wrapper = styled.View`
   padding-horizontal: ${spacings.screenSpacing}px;
   padding-bottom: ${spacings.bottomSpacing}px;
   background-color: #fff;
-  padding-top: ${Platform.OS === 'android' ? spacings.screenSpacing : 0}px;
+  padding-top: ${Platform.OS === 'android'
+    ? spacings.screenSpacing
+    : spacings.statusBarSpacing}px;
 `;
