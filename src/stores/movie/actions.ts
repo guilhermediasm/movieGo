@@ -23,3 +23,8 @@ export const setDetailsMovie = (detailsMovie: DetailMovie) => ({
 export const setClearDetailsMovie = () => ({
   type: MOVIE.SET_CLEAR_DETAILS_MOVIE,
 });
+
+export const setLikeMovie = (likes: AddLikeMovieParams[]) => ({
+  type: MOVIE.SET_LIKE_MOVIE,
+  payload: likes,
+});

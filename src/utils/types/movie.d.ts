@@ -79,3 +79,10 @@ declare type AddBuyMovieParams = {
   genre: string[];
   uri: string;
 };
+
+declare type AddLikeMovieParams = {
+  id: number;
+  title: string;
+  genre: string[];
+  uri: string;
+};

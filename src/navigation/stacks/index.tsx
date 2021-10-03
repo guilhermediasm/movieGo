@@ -8,6 +8,7 @@ import { MyTabBar } from '~/components';
 import {
   DetailMovieScreen,
   HomeScreen,
+  LikeScreen,
   PopularScreen,
   ShoppingScreen,
   SplashScreen,
@@ -52,15 +53,18 @@ export const InitialRouteStack = (): JSX.Element => (
       options={{ tabBarLabel: 'Popular' }}
     />
     <Tab.Screen
-      name={Routes.SHOPPING}
-      component={ShoppingScreen}
-      options={{ tabBarLabel: 'Carrinho' }}
+      name={Routes.LIKE}
+      component={LikeScreen}
+      options={{ tabBarLabel: 'Gostei' }}
     />
   </Tab.Navigator>
 );
 
 export const ModalsStack = (): JSX.Element => (
-  <Modals.Navigator screenOptions={{ presentation: 'modal' }}>
+  <Modals.Navigator
+    screenOptions={{ presentation: 'modal', headerShown: false }}
+  >
     <Modals.Screen name={Routes.DETAIL_MODAL} component={DetailMovieScreen} />
+    <Modals.Screen name={Routes.SHOPPING} component={ShoppingScreen} />
   </Modals.Navigator>
 );

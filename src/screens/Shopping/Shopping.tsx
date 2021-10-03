@@ -1,10 +1,14 @@
 import React, { FC } from 'react';
+import { IconArrowLeft } from '~/assets';
 import { getPriceListShop, isEmpty } from '~/utils';
 
 import {
   BottomShpping,
   CardBuy,
+  CarrinhoText,
   Container,
+  GolBack,
+  Header,
   ListShopBuyMovie,
   Ops,
   ShopBuy,
@@ -16,10 +20,18 @@ import {
 type Props = {
   shop: AddBuyMovieParams[];
   removeMovie(id: number): void;
+  onGoBack(): void;
 };
 
-const Shopping: FC<Props> = ({ shop, removeMovie }) => (
+const Shopping: FC<Props> = ({ onGoBack, shop, removeMovie }) => (
   <Wrapper>
+    <Header>
+      <GolBack onPress={() => onGoBack()}>
+        <IconArrowLeft color="black" />
+      </GolBack>
+      <CarrinhoText>Carrinho</CarrinhoText>
+    </Header>
+
     {!isEmpty(shop) && (
       <ListShopBuyMovie
         keyExtractor={(_item, i) => i.toString()}

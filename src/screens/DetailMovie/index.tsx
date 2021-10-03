@@ -1,8 +1,13 @@
 import React, { FC, useEffect } from 'react';
 
-import { NavigationActions, Routes, useRoute } from '~/navigation';
+import { NavigationActions, useRoute } from '~/navigation';
 import { useMovie, useShop } from '~/stores';
-import { getBoughtMovie, getTextGenereDetails, useAlerts } from '~/utils';
+import {
+  getBoughtMovie,
+  getLikeMovie,
+  getTextGenereDetails,
+  useAlerts,
+} from '~/utils';
 import { DetailsMovieModalScreenParams } from '~/utils/types';
 
 import DetailMovie from './DetailMovie';
@@ -12,6 +17,8 @@ export const DetailMovieContainer: FC = () => {
   const movie = useMovie();
   const shop = useShop();
   const { showError, showSuccess } = useAlerts();
+
+  const like = getLikeMovie(movie.detailsMovie.id, movie.allLikMovies);
 
   const getDetailsMovie = async () => {
     try {
@@ -48,12 +55,37 @@ export const DetailMovieContainer: FC = () => {
     NavigationActions.goBack();
   };
 
+  const onClickHeart = () => {
+    try {
+      if (!like) {
+        const informationLikeMovie = {
+          id: movie.detailsMovie.id,
+          title: movie.detailsMovie.title,
+          genre: getTextGenereDetails(movie.detailsMovie.genres),
+          uri: `https://image.tmdb.org/t/p/original${
+            movie.detailsMovie.poster_path
+              ? movie.detailsMovie.poster_path
+              : movie.detailsMovie.backdrop_path
+          }`,
+        };
+
+        movie.setLikeMovieIn(informationLikeMovie);
+      } else {
+        movie.removeLikeMovie(movie.detailsMovie.id);
+      }
+    } catch (error) {
+      showError('Ocorreu um erro em adquirir o filme');
+    }
+  };
+
   useEffect(() => {
     getDetailsMovie();
   }, []);
 
   return (
     <DetailMovie
+      onClickHeart={onClickHeart}
+      showColorHeart={like}
       bought={getBoughtMovie(movie.detailsMovie.id, shop.buyMovie)}
       BuyNow={BuyNow}
       detailsMovie={movie.detailsMovie}

@@ -6,6 +6,7 @@ import {
   setAllMoviePopular,
   setDetailsMovie,
   setGenereMovie,
+  setLikeMovie,
 } from './actions';
 
 /**
@@ -51,4 +52,21 @@ export const getAllMoviesPopular =
     }
 
     dispatch(setAllMoviePopular(movies));
+  };
+
+export const setLikeMovieIn =
+  (like: AddLikeMovieParams, oldLikes: AddLikeMovieParams[]): AppThunk =>
+  async (dispatch) => {
+    oldLikes.push(like);
+
+    dispatch(setLikeMovie(oldLikes));
+  };
+
+export const removeLikeMovie =
+  (id: number, oldLikes: AddLikeMovieParams[]): AppThunk =>
+  async (dispatch) => {
+    const removeIndex = oldLikes.findIndex((item) => item.id === id);
+    oldLikes.splice(removeIndex, 1);
+
+    dispatch(setLikeMovie(oldLikes));
   };

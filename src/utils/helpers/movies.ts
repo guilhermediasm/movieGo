@@ -39,7 +39,13 @@ export const getCoutries = (
 export const getLanguage = (
   language: { english_name: string; iso_639_1: string; name: string }[],
 ): string => (language ? language[0].name : 'N/A');
+
 export const getBoughtMovie = (
   id: number,
   buyMovie: AddBuyMovieParams[],
 ): boolean => buyMovie.findIndex((moviebuy) => moviebuy.id === id) === -1;
+
+export const getLikeMovie = (
+  id: number,
+  LikeMovie: AddLikeMovieParams[],
+): boolean => LikeMovie.findIndex((like) => like.id === id) > -1;

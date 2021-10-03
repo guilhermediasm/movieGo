@@ -1,6 +1,6 @@
 import { FlatList } from 'react-native';
 import styled from 'styled-components/native';
-import { BuyCard, ScreenWrapper, Typography } from '~/components';
+import { BuyCard, ScreenWrapper, Touchable, Typography } from '~/components';
 import { colors, spacings } from '~/theme';
 
 export const Wrapper = styled(ScreenWrapper)``;
@@ -35,4 +35,16 @@ export const ShopBuy = styled(Typography)`
   font-size: 18px;
   margin-top: ${spacings.minimumSpacing}px;
   color: ${colors.secondary.main};
+`;
+
+export const GolBack = styled(Touchable)``;
+
+export const Header = styled.View`
+  flex-direction: row;
+`;
+
+export const CarrinhoText = styled(Typography)`
+  font-weight: bold;
+  margin-left: 35%;
+  font-size: 20px;
 `;

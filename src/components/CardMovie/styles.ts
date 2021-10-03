@@ -1,4 +1,6 @@
 import styled from 'styled-components/native';
+import { FastImage } from '~/modules';
+
 import { colors, spacings } from '~/theme';
 import { getShadow } from '~/utils';
 import Touchable from '../Touchable';
@@ -8,7 +10,7 @@ export const Wrapper = styled.View`
   flex-direction: row;
 `;
 
-export const Image = styled.Image`
+export const Image = styled(FastImage)`
   width: 70px;
   border-radius: 15px;
   ${getShadow()}

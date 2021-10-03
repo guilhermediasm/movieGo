@@ -14,6 +14,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use((config) => {
+  console.tron.log({ Config });
   config.params = {
     ...config.params,
     language: 'pt-BR',

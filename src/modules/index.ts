@@ -17,3 +17,5 @@ export {
 } from 'react-native-flash-message';
 
 export { Rating, AirbnbRating } from 'react-native-ratings';
+
+export { default as FastImage } from 'react-native-fast-image';

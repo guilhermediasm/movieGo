@@ -1,7 +1,5 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable prettier/prettier */
 import React, { FC } from 'react';
-import { IconArrowLeft } from '~/assets';
+import { IconArrowLeft, IconHeart } from '~/assets';
 import { AirbnbRating } from '~/modules';
 import {
   convertDateToYear,
@@ -32,6 +30,7 @@ import {
   TextSynopsi,
   Title,
   TitleSynopsi,
+  TouchableIconHeart,
   Wrapper,
   WrapperRating,
 } from './styles';
@@ -41,9 +40,18 @@ type Props = {
   onGoBack(): void;
   BuyNow(): void;
   bought: boolean;
+  onClickHeart(): void;
+  showColorHeart: boolean;
 };
 
-const DetailMovie: FC<Props> = ({ bought, detailsMovie, onGoBack, BuyNow }) => (
+const DetailMovie: FC<Props> = ({
+  bought,
+  detailsMovie,
+  onGoBack,
+  BuyNow,
+  onClickHeart,
+  showColorHeart,
+}) => (
   <Wrapper>
     <GolBack onPress={() => onGoBack()}>
       <IconArrowLeft color="black" />
@@ -78,6 +86,9 @@ const DetailMovie: FC<Props> = ({ bought, detailsMovie, onGoBack, BuyNow }) => (
           {getCoutries(detailsMovie.production_countries)}
         </DurationMovie>
       </ContainerDetailMovie>
+      <TouchableIconHeart onPress={() => onClickHeart()}>
+        <IconHeart color={showColorHeart ? '#ee4040' : '#000'} />
+      </TouchableIconHeart>
     </ContainerMovie>
     <InfoMovie>
       <Language
@@ -98,9 +109,14 @@ const DetailMovie: FC<Props> = ({ bought, detailsMovie, onGoBack, BuyNow }) => (
     <BottomScreenBuy>
       <PriceBuyMovie>
         <Price>Preço</Price>
-        <PriceBuy>R$ {detailsMovie.price}</PriceBuy>
+        <PriceBuy>
+          R$
+          {detailsMovie.price}
+        </PriceBuy>
       </PriceBuyMovie>
-      <BuyNowButton disabled={!bought} onPress={() => BuyNow()}>Comprar agora</BuyNowButton>
+      <BuyNowButton disabled={!bought} onPress={() => BuyNow()}>
+        Comprar agora
+      </BuyNowButton>
     </BottomScreenBuy>
   </Wrapper>
 );
