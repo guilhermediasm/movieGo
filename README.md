@@ -15,7 +15,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="movieGo" title="MovieGo" src="./assets/banner.png" />
+    <img alt="movieGo" title="MovieGo" src="./src/assets/banner.png" />
 </h1>
 
 <h4 align="center"> 
@@ -55,15 +55,15 @@
 ### Mobile
 
 <p align="center">
-  <img alt="movieGo" title="#MovieGo" src="./assets/screenListMovie.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenListMovie.png" width="200px">
 
-  <img alt="movieGo" title="#MovieGo" src="./assets/screenPopularMovie.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenPopularMovie.png" width="200px">
 
-  <img alt="movieGo" title="#MovieGo" src="./assets/screenShop.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenShop.png" width="200px">
   
-  <img alt="movieGo" title="#MovieGo" src="./assets/screenDetails.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenDetails.png" width="200px">
 
-  <img alt="movieGo" title="#MovieGo" src="./assets/screenLikeMovie.png" width="200px">
+  <img alt="movieGo" title="#MovieGo" src="./src/assets/screenLikeMovie.png" width="200px">
 </p>
 
 ---
@@ -90,13 +90,13 @@ $ git clone git@github.com:guilhermediasm/movieGo.git
 $ cd movieGo
 
 # Instale as dependências
-$ npm install
+$ yarn
 
 # Execute a aplicação em modo de desenvolvimento
 ## Caso esteja no windows/Linux
-$ npm android 
+$ yarn android 
 ## Caso esteja no Mac
-$ npm ios 
+$ yarn ios 
 
 ```
 
@@ -143,11 +143,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <a href="https://github.com/guilhermediasm">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29741757?s=400&u=f548d43e8cb307d01900020e95c4a575c911910a&v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Guilherme Maria</b></sub></a> <a>🚀</a>
+ <sub><b>Guilherme Maria</b></sub></a>
  <br />
 
-[![Linkedin Badge](https://media-exp1.licdn.com/dms/image/C4E03AQFzt9VIqBXzWw/profile-displayphoto-shrink_200_200/0/1576337742796?e=1639008000&v=beta&t=kerrdMdzxW-GAT8SF-iZfG3uPdPwizrB42y23w11dCk)](https://www.linkedin.com/in/guilherme-gdm/) 
-[![Gmail Badge](https://avatars.githubusercontent.com/u/29741757?s=400&u=f548d43e8cb307d01900020e95c4a575c911910a&v=4)](mailto:guilherme.gdm1@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guilherme-gdm/)](https://www.linkedin.com/in/guilherme-gdm/) 
+[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:guilherme.gdm1@gmail.com)](mailto:guilherme.gdm1@gmail.com)
 
 ---
 
