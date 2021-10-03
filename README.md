@@ -143,9 +143,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <sub><b>Guilherme Maria</b></sub></a>
  <br />
 
-[![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guilherme-gdm/)](https://www.linkedin.com/in/guilherme-gdm/) 
-[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:guilherme.gdm1@gmail.com)](mailto:guilherme.gdm1@gmail.com)
-
 ---
 
 ## 📝 Licença
