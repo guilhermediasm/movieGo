@@ -4,7 +4,7 @@ import { Routes } from '~/navigation';
 export type TopTabStackParams = {
   [Routes.HOME]: undefined;
   [Routes.POPULAR]: undefined;
-  [Routes.SHOPPING]: undefined;
+  [Routes.LIKE]: undefined;
 };
 
 export type SettingsStackParams = {
@@ -13,6 +13,7 @@ export type SettingsStackParams = {
 
 export type ModalsStackParams = {
   [Routes.DETAIL_MODAL]: { idMovie: number };
+  [Routes.SHOPPING]: undefined;
 };
 
 export type DetailsMovieModalScreenParams = RouteProp<

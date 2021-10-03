@@ -1,4 +1,10 @@
-type Payload = [MOVIES[], MovieApi, GenereMovie[], DetailMovie];
+type Payload = [
+  MOVIES[],
+  MovieApi,
+  GenereMovie[],
+  DetailMovie,
+  AddLikeMovieParams[],
+];
 
 export type Action = {
   type: string;
@@ -10,4 +16,5 @@ export type MovieState = {
   allMoviesPopular: MovieApi;
   allGenereMovie: GenereMovie[];
   detailsMovie: DetailMovie;
+  allLikMovies: AddLikeMovieParams[];
 };

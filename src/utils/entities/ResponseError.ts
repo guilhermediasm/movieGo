@@ -10,7 +10,7 @@ export default class ResponseError {
   constructor({ response, isAxiosError }: AxiosError) {
     const message =
       response?.status === 401
-        ? 'Sua sessão expirou. Por favor faça o login de novo.'
+        ? 'Ocorreu um erro no seu Token, favor verificar'
         : response?.data?.message
         ? `${response?.data?.message}\n \n${
             response?.config ? response?.config.headers?.['x-tid'] : ''

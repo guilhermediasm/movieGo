@@ -3,9 +3,9 @@ import { Provider } from 'react-redux';
 import { NavigationContainerRef } from '@react-navigation/core';
 import { ToastMessage } from '~/modules';
 import '~/utils/config/reactotron';
+import { colors } from '~/theme';
 import { Navigation, NavigationActions } from './navigation';
 
-import { colors } from '~/theme';
 import { store } from './stores/store';
 
 ToastMessage.setColorTheme({

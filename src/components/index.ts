@@ -6,3 +6,4 @@ export { default as Typography } from './Typography';
 export { default as CardMovie } from './CardMovie';
 export { default as CampMovieDetail } from './CampMovieDetail';
 export { default as BuyCard } from './BuyCard';
+export { default as LikeCard } from './LikeCard';

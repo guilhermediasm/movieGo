@@ -1,13 +1,22 @@
-import { MaterialTopTabBarProps } from '@react-navigation/material-top-tabs';
 import React from 'react';
+import { MaterialTopTabBarProps } from '@react-navigation/material-top-tabs';
+import { IconShop } from '~/assets';
+import { NavigationActions, Routes, Stacks } from '~/navigation';
+import { useShop } from '~/stores';
 import { colors } from '~/theme';
+import { isEmpty } from '~/utils';
 import {
-  Wrapper,
-  TabBarWrapper,
-  TouchableLabel,
-  LabelTitle,
   Container,
+  CountBuyShop,
+  Go,
+  Header,
+  LabelTitle,
+  TabBarWrapper,
   Title,
+  TouchableIconShop,
+  TouchableLabel,
+  ViewCountBuyShop,
+  Wrapper,
 } from './styles';
 
 type Props = {
@@ -17,11 +26,31 @@ type Props = {
 const MyTabBar: React.FC<Props> = ({ topTabBarPorps }) => {
   const { state, descriptors, navigation } = topTabBarPorps;
 
+  const shop = useShop();
+
+  const navigationShop = () => {
+    NavigationActions.navigate(Stacks.MODAL, {
+      screen: Routes.SHOPPING,
+    });
+  };
+
   return (
     <TabBarWrapper>
-      <Container>
-        <Title>Movie</Title>
-      </Container>
+      <Header>
+        <Container>
+          <Title>Movie</Title>
+          <Go>Go</Go>
+        </Container>
+        <TouchableIconShop onPress={() => navigationShop()}>
+          {!isEmpty(shop.buyMovie) && (
+            <ViewCountBuyShop>
+              <CountBuyShop>{shop.buyMovie.length}</CountBuyShop>
+            </ViewCountBuyShop>
+          )}
+
+          <IconShop />
+        </TouchableIconShop>
+      </Header>
       <Wrapper>
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
@@ -45,7 +74,6 @@ const MyTabBar: React.FC<Props> = ({ topTabBarPorps }) => {
             });
 
             if (!isFocused && !event.defaultPrevented) {
-              // The `merge: true` option makes sure that the params inside the tab screen are preserved
               navigation.navigate(route.name, {
                 name: route.name,
                 merge: true,

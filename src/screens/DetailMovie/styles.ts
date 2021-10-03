@@ -6,6 +6,7 @@ import {
   Touchable,
   Typography,
 } from '~/components';
+import { FastImage } from '~/modules';
 import { colors, spacings } from '~/theme';
 import { getShadow } from '~/utils';
 
@@ -26,7 +27,7 @@ export const Title = styled(Typography)`
   font-size: 14px;
 `;
 
-export const Image = styled.Image`
+export const Image = styled(FastImage)`
   width: 70px;
   height: 100px;
   border-radius: 15px;
@@ -102,4 +103,9 @@ export const Price = styled(Typography)`
 export const PriceBuy = styled(Typography)`
   color: ${colors.secondary.main};
   font-size: 18px;
+`;
+
+export const TouchableIconHeart = styled(Touchable)`
+  align-self: center;
+  margin-left: ${spacings.mediumSpacing}px;
 `;

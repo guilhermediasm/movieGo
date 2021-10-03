@@ -4,12 +4,14 @@ import { Action, MovieState } from './types';
 const defaultSegments: MovieApi = {} as MovieApi;
 const defaultGenereMovie: GenereMovie[] = [];
 const defaultDetailsMovie: DetailMovie = {} as DetailMovie;
+const defaultAllLikMovies: AddLikeMovieParams[] = [];
 
 const initialState: MovieState = {
   allMovies: defaultSegments,
   allMoviesPopular: defaultSegments,
   allGenereMovie: defaultGenereMovie,
   detailsMovie: defaultDetailsMovie,
+  allLikMovies: defaultAllLikMovies,
 };
 
 export const reducer = (state: MovieState = initialState, action: Action) => {
@@ -39,6 +41,11 @@ export const reducer = (state: MovieState = initialState, action: Action) => {
       return {
         ...state,
         detailsMovie: defaultDetailsMovie,
+      };
+    case MOVIE.SET_LIKE_MOVIE:
+      return {
+        ...state,
+        allLikMovies: action.payload,
       };
     default:
       return state;
